@@ -1,8 +1,16 @@
   - name: Github
     url: https://github.com/
     img: /asset/img/github.png
+<<<<<<< HEAD
     description: 面向开源及私有软件项目的托管平台
   - name: Github
     url: https://github.com/
     img: /asset/img/github.png
     description: 面向开源及私有软件项目的托管平台
+=======
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /asset/img/github.png
+    description: 面向开源及私有软件项目的托管平台。
+>>>>>>> c714f0a5c34264467ab35bfd6758c10a4d473c3d
