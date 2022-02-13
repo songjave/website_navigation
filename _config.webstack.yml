@@ -2,12 +2,12 @@ favicon: /asset/img/favicon.png
 banner: /asset/img/favicon.png
 
 logo:
-  expanded: /images/logo@2x.png
-  collapsed: /images/logo-collapsed@2x.png
-  dark: /images/logo_dark@2x.png
+  expanded: /asset/img/logo@2x.png
+  collapsed: /asset/img/logo-collapsed@2x.png
+  dark: /asset/img/logo_dark@2x.png
 
 flag:
-  - name: Chinese
+  - name: ZH
     default: true
     icon: flag-cn
     index: /index.html
@@ -29,43 +29,27 @@ githubCorner: '<a href="https://github.com/songjave" class="github-corner" aria-
 expandAll: false
 menu:
   - name: 常用工具
-    icon: far fa-star
+    icon: lni lni-star
     config: hotTools
   - name: 其他工具
-    icon: fas fa-tools
+    icon: lni lni-radio-button
     submenu:
       - name: 开发工具
-        icon: fas fa-tools
+        icon: lni lni-layout
         config: devTools
       - name: 我的博客
-        icon: fas fa-blog
+        icon: lni lni-github
         config: myBlog
-
-hotTools:
-  - name: ZCOOL站酷
-    url: https://www.zcool.com.cn/
-    img: /asset/img/zcool.png
-    description: 中国设计师互动平台
-
-devTools:
-  - name: Github
-    url: https://github.com/
-    img: /images/logos/github.png
-    description: 面向开源及私有软件项目的托管平台。
-  - name: Github
-    url: https://github.com/
-    img: /images/logos/github.png
-    description: 面向开源及私有软件项目的托管平台。
 
 myBlog:
   - name: HCLonely Blog
     url: https://blog.hclonely.com/
-    img: /images/logos/myblog.png
+    img: /asset/img/songjave.png
     description: 一个懒人的博客。
 
 about:
   url: /about/
-  icon: far fa-user
+  icon: lni lni-friendly
   name: 关于本站
 
 aboutPage:
@@ -76,7 +60,7 @@ aboutPage:
     head: 关于作者
     name: Songjave
     url: https://songjave.github.io/
-    img: /images/logos/myblog.png
+    img: /asset/img/songjave.png
     description: 二次元技术宅
     html: '<br /><blockquote><p>本站是<a href="https://github.com/HCLonely">HCLonely</a>基于<a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a>项目做的一款<a href="https://hexo.io/">Hexo</a>主题。这是一个公益项目，而且是开源的。</p></blockquote>'
 
@@ -84,12 +68,13 @@ since: 2022
 
 busuanzi:
   enable: false
-  position: sidebar # 'footer','sidebar'
+  position: footer # 'footer','sidebar'
   pv: 本站总访问量$pv
   uv: 本站总访客数$uv
 
 custom:
   head: |- # 以下内容插入到<head></head>标签内，可设置多行，注意每行开头至少四个空格
+    <link href="/asset/lineicons/lineicons.css" rel="stylesheet">
     <!-- 直接添加html内容即可 -->
     <!-- 可设置多行 -->
   body: |- # 以下内容插入到</body>标签之前，可设置多行，注意每行开头至少四个空格
@@ -113,10 +98,10 @@ js:
 
 css:
   hclonely: /css/hclonely.css
-  # fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
+  fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
   linecons: /css/fonts/linecons/css/linecons.min.css
   fontawesome: /css/fonts/fontawesome/css/all.min.css
-  bootstrap: /css/bootstrap.min.css
+  bootstrap: /asset/css/bootstrap.css
   xenonCore: /asset/css/xenon-core.css
   xenonComponents: /asset/css/xenon-components.css
   xenonSkins: /asset/css/xenon-skins.css
