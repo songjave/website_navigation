@@ -1,10 +1,10 @@
-favicon: /asset/img/favicon.png
-banner: /asset/img/favicon.png
+favicon: /images/favicon.png
+banner: /images/webstack_banner_cn.png
 
 logo:
-  expanded: /asset/img/logo@2x.png
-  collapsed: /asset/img/logo-collapsed@2x.png
-  dark: /asset/img/logo_dark@2x.png
+  expanded: /images/logo@2x.png
+  collapsed: /images/logo-collapsed@2x.png
+  dark: /images/logo_dark@2x.png
 
 flag:
   - name: zh
@@ -32,7 +32,7 @@ menu:
     icon: ant ant-star
     config: hotTools
   - name: 其他工具
-    icon: ant ant-appstore
+    icon: ant ant-block
     submenu:
       - name: 开发工具
         icon: ant ant-wrench
@@ -44,7 +44,7 @@ menu:
 myBlog:
   - name: HCLonely Blog
     url: https://blog.hclonely.com/
-    img: /asset/img/songjave.png
+    img: /images/logos/myblog.png
     description: 一个懒人的博客。
 
 about:
@@ -60,7 +60,7 @@ aboutPage:
     head: 关于作者
     name: Songjave
     url: https://songjave.github.io/
-    img: /asset/img/songjave.png
+    img: /images/logos/myblog.png
     description: 二次元技术宅
     html: '<br /><blockquote><p>本站是<a href="https://github.com/HCLonely">HCLonely</a>基于<a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a>项目做的一款<a href="https://hexo.io/">Hexo</a>主题。这是一个公益项目，而且是开源的。</p></blockquote>'
 
