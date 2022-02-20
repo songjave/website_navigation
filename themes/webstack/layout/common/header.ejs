@@ -1,0 +1,72 @@
+<div class="sidebar-menu toggle-others fixed">
+  <div class="sidebar-menu-inner">
+    <header class="logo-env">
+      <div class="logo">
+        <a href="<%= url_for('/index.html') %>" class="logo-expanded">
+          <img src="<%= url_for(setting.logo.expanded) %>" width="100%" alt="" />
+        </a>
+        <a href="<%= url_for('/index.html') %>" class="logo-collapsed">
+          <img src="<%= url_for(setting.logo.collapsed) %>" width="40" alt="" />
+        </a>
+      </div>
+      <div class="mobile-menu-toggle visible-xs">
+        <a href="#" onclick="switchNightMode()">
+          <svg t="1593061068148" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1681" width="15" height="15">
+            <path d="M582.4 326.4c-140.8 0-256 115.2-256 256s115.2 256 256 256 256-115.2 256-256-115.2-256-256-256z m0 448c-70.4 0-131.2-36.8-164.8-92.8 12.8 3.2 27.2 4.8 40 4.8 121.6 0 219.2-99.2 219.2-219.2 0-17.6-1.6-35.2-6.4-52.8 60.8 32 102.4 96 102.4 169.6 1.6 104-84.8 190.4-190.4 190.4zM582.4 262.4c17.6 0 32-14.4 32-32v-128c0-17.6-14.4-32-32-32s-32 14.4-32 32v128c0 17.6 14.4 32 32 32zM262.4 582.4c0-17.6-14.4-32-32-32h-128c-17.6 0-32 14.4-32 32s14.4 32 32 32h128c17.6 0 32-14.4 32-32zM310.4 356.8c6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6 12.8-12.8 12.8-32 0-44.8l-91.2-91.2c-12.8-12.8-32-12.8-44.8 0-12.8 12.8-12.8 32 0 44.8l91.2 91.2zM944 220.8c-12.8-12.8-32-12.8-44.8 0l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-33.6 0-44.8zM310.4 808l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-32 0-44.8-11.2-11.2-32-11.2-44.8 0z" p-id="1682"></path>
+          </svg>
+        </a>
+        <a href="#" data-toggle="mobile-menu">
+          <i class="icon ant ant-menu"></i>
+        </a>
+      </div>
+    </header>
+    <ul id="main-menu" class="main-menu">
+      <% for( let e of setting.menu ) { %>
+      <li class="<%= (e.submenu && setting.expandAll) ? "expanded" : "" %>">
+        <% if (e.submenu) { %>
+        <a class="fas fa-angle-down" style="cursor: pointer;">
+          <% } else { %>
+          <a href="#<%= e.name %>" class="smooth">
+            <% } %>
+            <i class="<%= e.icon %>"></i>
+            <span class="title"><%= e.name %></span>
+          </a>
+          <% if (e.submenu) { %>
+          <ul style="display: <%= setting.expandAll ? "block" : "none" %>;">
+            <% e.submenu.forEach(function(e) { %>
+            <li>
+              <a href="#<%= e.name %>" class="smooth">
+                <i class="<%= e.icon %>"></i>
+                <span class="title"><%= e.name %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+          <% } %>
+      </li>
+      <% } %>
+      <% if (setting.about) { %>
+      <li class="submit-tag">
+        <a href="<%= url_for(setting.about.url) %>">
+          <i class="<%= setting.about.icon %>"></i>
+          <span class="tooltip-blue"><%= setting.about.name %></span>
+        </a>
+      </li>
+      <% } %>
+      <% if (setting.busuanzi.enable && setting.busuanzi.position === 'sidebar') { %>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fas fa-eye"></i>
+          <span id="busuanzi_container_site_pv"><%- setting.busuanzi.pv.replace(/\$pv/i,'<span id="busuanzi_value_site_pv"></span>') %></span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fas fa-users"></i>
+          <span id="busuanzi_container_site_uv"><%- setting.busuanzi.uv.replace(/\$uv/i,'<span id="busuanzi_value_site_uv"></span>') %></span>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</div>
