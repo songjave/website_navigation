@@ -7,7 +7,7 @@ logo:
   dark: /asset/img/logo_dark@2x.png
 
 flag:
-  - name: ZH
+  - name: zh
     default: true
     icon: flag-cn
     index: /index.html
@@ -18,7 +18,7 @@ userDefinedSearchData:
   custom: false
   thisSearch: https://www.baidu.com/s?wd=
   thisSearchIcon: url(https://www.baidu.com/favicon.ico)
-  hotStatus: true
+  hotStatus: false
   data:
     - name: 百度
       img: url(https://www.baidu.com/favicon.ico)
@@ -29,16 +29,16 @@ githubCorner: '<a href="https://github.com/songjave" class="github-corner" aria-
 expandAll: false
 menu:
   - name: 常用工具
-    icon: lni lni-star
+    icon: ant ant-star
     config: hotTools
   - name: 其他工具
-    icon: lni lni-radio-button
+    icon: ant ant-appstore
     submenu:
       - name: 开发工具
-        icon: lni lni-layout
+        icon: ant ant-wrench
         config: devTools
       - name: 我的博客
-        icon: lni lni-github
+        icon: ant ant-deploymentunit
         config: myBlog
 
 myBlog:
@@ -49,7 +49,7 @@ myBlog:
 
 about:
   url: /about/
-  icon: lni lni-friendly
+  icon: ant ant-heart
   name: 关于本站
 
 aboutPage:
@@ -67,14 +67,13 @@ aboutPage:
 since: 2022
 
 busuanzi:
-  enable: false
+  enable: true
   position: footer # 'footer','sidebar'
   pv: 本站总访问量$pv
   uv: 本站总访客数$uv
 
 custom:
   head: |- # 以下内容插入到<head></head>标签内，可设置多行，注意每行开头至少四个空格
-    <link href="/asset/lineicons/lineicons.css" rel="stylesheet">
     <!-- 直接添加html内容即可 -->
     <!-- 可设置多行 -->
   body: |- # 以下内容插入到</body>标签之前，可设置多行，注意每行开头至少四个空格
@@ -98,11 +97,9 @@ js:
 
 css:
   hclonely: /css/hclonely.css
-  fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
-  linecons: /css/fonts/linecons/css/linecons.min.css
-  fontawesome: /css/fonts/fontawesome/css/all.min.css
-  bootstrap: /asset/css/bootstrap.css
-  xenonCore: /asset/css/xenon-core.css
-  xenonComponents: /asset/css/xenon-components.css
-  xenonSkins: /asset/css/xenon-skins.css
-  nav: /asset/css/nav.css
+  anticon: /css/fonts/anticon/iconfont.css
+  bootstrap: /css/bootstrap.min.css
+  xenonCore: /css/xenon-core.min.css
+  xenonComponents: /css/xenon-components.min.css
+  xenonSkins: /css/xenon-skins.min.css
+  nav: /css/nav.min.css
